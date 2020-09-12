@@ -1,7 +1,8 @@
 body {
   margin: 0;
   text-align:center;
-  background-color: #fff;
+  background-color: #21252B;
+  color: #fff;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -37,7 +38,7 @@ h2,p {
 }
 
 .contact{
-  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 60px;
 }
   
 .icons{
@@ -47,7 +48,8 @@ h2,p {
   
 .icons>a{
   color:#ffff;
-  background: #777777;
+  /* background: #777777; */
+  background: #df543c;
   border-radius:4px;
   text-align:center;
   text-decoration:none;
@@ -58,33 +60,9 @@ h2,p {
   height:28px;
   padding-top:12px;
   margin:0 2px;
-  -o-transition:all .5s;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  transition: all .5s;
     -webkit-font-smoothing: antialiased;
 }
   
 .icons>a:hover {
   background: #df543c;
-}
-  
-a span {
-  color:#666;
-  position:absolute;
-  font-family:sans-serif;
-  bottom:0;
-  left:-25px;
-  right:-25px;
-  padding:5px 7px;
-  z-index:-1;
-  font-size:14px;
-  border-radius:2px;
-  background:#fff;
-  visibility:hidden;
-  opacity:0;
-  -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
