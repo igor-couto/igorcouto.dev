@@ -2,8 +2,7 @@
 
 ## About
 
-It's just my presentation site.
-A simple site with links to find me around the internet.
+A simple site with links to find me around the internet. Check it out: [https://igorcouto.dev](https://igorcouto.dev)
 
 ## Author
 
