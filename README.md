@@ -1,8 +1,8 @@
-# igorcouto.dev
+# igorcouto.com
 
 ## About
 
-A simple site with links to find me around the internet. Check it out: [https://igorcouto.dev](https://igorcouto.dev)
+A simple site with links to find me around the internet. Check it out: [http://igorcouto.com](https://igorcouto.com)
 
 ## Author
 
