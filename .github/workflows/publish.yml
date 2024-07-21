@@ -53,6 +53,6 @@ jobs:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
       run: |
-        scp -P $SSH_PORT -r ./website/dist/* $SSH_USER@$SSH_HOST:/var/www/
-        ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "chmod -R 755 /var/www/"
+        scp -P $SSH_PORT -r ./website/dist/* $SSH_USER@$SSH_HOST:/tmp/website/
+        ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "sudo mv /tmp/website/* /var/www/your_website_directory/ && sudo chmod -R 755 /var/www/your_website_directory/"
       shell: bash
