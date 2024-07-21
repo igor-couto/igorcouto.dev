@@ -3,7 +3,7 @@ name: Deploy Website
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -22,15 +22,21 @@ jobs:
       run: npm install html-minifier-terser clean-css-cli -g
 
     - name: Minify HTML
-      run: html-minifier-terser --input-dir ./website --output-dir ./website/dist --collapse-whitespace --remove-comments --minify-css true --minify-js true
+      run: |
+        find ./website -name "*.html" -exec html-minifier-terser --collapse-whitespace --remove-comments --minify-css true --minify-js true -o {}.min {} \;
+        find ./website -name "*.html.min" -exec sh -c 'mv "$0" "${0%.min}"' {} \;
 
     - name: Minify CSS
       run: cleancss -o ./website/dist/style.css ./website/style.css
 
+    - name: Create dist directory
+      run: mkdir -p ./website/dist
+
     - name: Copy other files
       run: |
         cp ./website/index.html ./website/dist/index.html
-        cp -r ./website/icons ./website/dist/icons
+        cp -r ./website/assets ./website/dist/assets
+        cp -r ./website/error ./website/dist/error
         cp -r ./website/favicon.ico ./website/dist/favicon.ico
 
     - name: Setup SSH
@@ -46,6 +52,6 @@ jobs:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
       run: |
-        scp -P $SSH_PORT -r ./website/dist/* $SSH_USER@$SSH_HOST:/var/www/your_website_directory/
-        ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "chmod -R 755 /var/www/your_website_directory/"
+        scp -P $SSH_PORT -r ./website/dist/* $SSH_USER@$SSH_HOST:/var/www/
+        ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "chmod -R 755 /var/www/"
       shell: bash
