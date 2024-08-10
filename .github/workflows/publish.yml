@@ -39,7 +39,6 @@ jobs:
         cp ./website/index.html ./website/dist/index.html
         cp -r ./website/assets ./website/dist/assets
         cp -r ./website/error ./website/dist/error
-        cp -r ./website/favicon.ico ./website/dist/favicon.ico
 
     - name: Setup SSH
       run: |
