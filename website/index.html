@@ -1,52 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="theme-color" content="#6BAA64" />
-        <meta name="description" content="Igor Couto's personal website" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-        <title>Igor Couto</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#6BAA64" />
+    <meta name="description" content="Igor Couto's personal website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Igor Couto</title>
+</head>
 
-    <body>
+<body>
+    <header role="banner">
+        <div class="background-blur"></div>
         <h1>IGOR COUTO</h1>
-        <section class="description">
-            <p>I'm a software engineer living in Porto, Portugal</p>
-        </section>
-        <h2>You can find me at</h2>
-        <div class="icons">
-            <a href="https://linkedin.com/in/igor-fcouto" aria-label="Linked-in page">
-                <img src="assets/linkedin.svg" alt="LinkedIn icon" width="20" height="20">
-            </a>
-            <a href="https://github.com/igor-couto" aria-label="Github page">
-                <img src="assets/github.svg" alt="Github icon" width="20" height="20">
-            </a>
-            <a href="https://stackoverflow.com/users/9401821/igor-couto" aria-label="Stack Overflow page">
-                <img src="assets/stackoverflow.svg" alt="Stack Overflow icon" width="20" height="20">
-            </a>
-            <a href="https://fb.com/igorcouto" aria-label="Facebook page">
-                <img src="assets/facebook.svg" alt="Facebook icon" width="20" height="20">
-            </a>
-            <a href="https://instagram.com/igor.fcouto" aria-label="Facebook page">
-                <img src="assets/instagram.svg" alt="Instagram icon" width="20" height="20">
-            </a>
-            <a href="https://twitter.com/igr_couto" aria-label="Twitter page">
-                <img src="assets/twitter.svg" alt="Twitter icon" width="20" height="20">
-            </a>
-            <a href="https://igorcouto.deviantart.com" aria-label="DeviantArt page">
-                <img src="assets/deviantart.svg" alt="DeviantArt icon" width="20" height="20">
-            </a>
-            <a href="https://www.youtube.com/@igor-couto" aria-label="YouTube page">
-                <img src="assets/youtube.svg" alt="Youtube icon" width="20" height="20">
-            </a>
-        </div>
-        <section class="contact">
-            <h2>Contact</h2>
-            <p>igor.fcouto@gmail.com</p>
-        </section>
-    </body>
+        <span class="description">
+            I'm a software engineer living in Porto, Portugal
+        </span>
+    </header>
 
+    <main role="main">
+        <section>
+            <h2>Pleased to meet you</h2>
+            <p>This is my personal website. It serves as my online presence and a contact hub. I'm also showcasing some personal projects.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+
+            <p>Feel free to connect with me through the platforms below. Whether you have questions, collaborations in mind, or just want to say hello, I'm always happy to hear from you! You can find me at:</p>
+
+            <div class="icons">
+                <a href="https://linkedin.com/in/igor-fcouto" aria-label="LinkedIn profile">
+                    <img src="assets/linkedin.svg" alt="LinkedIn profile icon" width="40" height="40">
+                </a>
+                <a href="https://github.com/igor-couto" aria-label="GitHub profile">
+                    <img src="assets/github.svg" alt="GitHub profile icon" width="40" height="40">
+                </a>
+                <a href="https://stackoverflow.com/users/9401821/igor-couto" aria-label="Stack Overflow profile">
+                    <img src="assets/stackoverflow.svg" alt="Stack Overflow icon" width="40" height="40">
+                </a>
+                <a href="https://fb.com/igorcouto" aria-label="Facebook profile">
+                    <img src="assets/facebook.svg" alt="Facebook icon" width="40" height="40">
+                </a>
+                <a href="https://instagram.com/igor.fcouto" aria-label="Instagram profile">
+                    <img src="assets/instagram.svg" alt="Instagram icon" width="40" height="40">
+                </a>
+                <a href="https://twitter.com/igr_couto" aria-label="Twitter profile">
+                    <img src="assets/twitter.svg" alt="Twitter icon" width="40" height="40">
+                </a>
+                <a href="https://igorcouto.deviantart.com" aria-label="DeviantArt profile">
+                    <img src="assets/deviantart.svg" alt="DeviantArt icon" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com/@igor-couto" aria-label="YouTube profile">
+                    <img src="assets/youtube.svg" alt="Youtube icon" width="40" height="40">
+                </a>
+            </div>
+            <div id="email">
+                <a href="mailto:igor.fcouto@gmail.com">igor.fcouto@gmail.com</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <p>Explore some of the personal projects I've been working on. Each one reflects my passion, creativity, and dedication to continuous learning. Take a look and feel free to dive into the details!</p>
+        
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/avatarize.png" alt="Project 1" class="card-img">
+                                <div class="card-content">
+                                    <h3>Avatarize</h3>
+                                    <p>Short description of Avatarize.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/activities-api.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Activities API</h3>
+                                    <p>Short description of Activities API.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/valenca.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Valenca Theme</h3>
+                                    <p>Short description of Valenca VSCode Theme.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/geostates.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>GeoStates Game</h3>
+                                    <p>Short description of GeoStates Game.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/ahoy-chat.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Ahoy! Chat</h3>
+                                    <p>Short description of Ahoy! Chat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/face-recognition.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Face Recognition</h3>
+                                    <p>Short description of Face Recognition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/payment-gateway.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Payment Gateway Simulator</h3>
+                                    <p>Short description of Payment Gateway Simulator</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/wordle.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Wordle Clone</h3>
+                                    <p>Short description of Wordle Clone</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/threemonsters.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Three.hs Monsters</h3>
+                                    <p>Short description of Three.js Monsters</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/ascii.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>ASCII Rust</h3>
+                                    <p>Short description of ASCII Rust</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/akaroa.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Akaroa VSCode Theme</h3>
+                                    <p>Short description of Akaroa</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card">
+                                <img src="assets/personas.png" alt="Project 2" class="card-img">
+                                <div class="card-content">
+                                    <h3>Personas</h3>
+                                    <p>Short description of Personas</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+                <button class="carousel-button prev" aria-label="Previous project">&#10094;</button>
+                <button class="carousel-button next" aria-label="Next project">&#10095;</button>
+            </div>
+        </section>
+
+    </main>
+
+</body>
 </html>
+
+<script>
+    const track = document.querySelector('.carousel');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    let currentIndex = 0;
+
+    const updateSlidePosition = () => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    };
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlidePosition();
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 1;
+        }
+        updateSlidePosition();
+    });
+
+    window.addEventListener('resize', updateSlidePosition);
+</script>
