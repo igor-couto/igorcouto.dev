@@ -39,6 +39,8 @@ jobs:
         cp ./website/index.html ./website/dist/index.html
         cp -r ./website/assets ./website/dist/assets
         cp -r ./website/error ./website/dist/error
+        cp -r ./website/projects ./website/dist/projects
+        cp -r ./website/sitemap.xml ./website/dist/sitemap.xml
 
     - name: Setup SSH
       run: |
