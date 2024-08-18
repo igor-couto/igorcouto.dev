@@ -9,7 +9,7 @@
 body {
     text-rendering: optimizeLegibility;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     text-align: center;
     background-image: linear-gradient(#1e2126 0%, #000000 100%);
     color: #fff;
@@ -37,6 +37,7 @@ section {
     margin-right: auto !important;
     margin-left: auto !important;
     max-width: 75rem;
+    padding: 0 15px;
 }
   
 h1 {
@@ -115,6 +116,11 @@ p {
     background-image: radial-gradient(circle at 0 0,#72c4f7,#5e7af7);
     transform: scale(1.1);
     transition: transform 0.3s ease;
+}
+
+.icons > a img {
+    width: 40px;
+    height: 40px;
 }
 
 .carousel-container {
@@ -228,9 +234,7 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* background-color: rgba(0, 0, 0, 0.5); */
     background-color: rgba(255, 255, 255, 0.7);
-    /* background-color:#fff; */
     border: none;
     color: #000;
     padding: 10px;
@@ -249,34 +253,72 @@ p {
 }
 
 .carousel-button:hover {
-    /* background-color: rgba(255, 255, 255, 0.7); */
     background-color:#fff;
     font-size: 1.8rem;
     transition: transform 0.3s ease;
 }
 
-/* Responsive behavior */
-@media (max-width: 1200px) {
-    .carousel-slide {
-        flex: 1 0 25%; /* 4 cards visible */
-    }
-}
-
-@media (max-width: 992px) {
-    .carousel-slide {
-        flex: 1 0 33.33%; /* 3 cards visible */
-    }
-}
-
 @media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p, .description, #email {
+        font-size: 18px;
+    }
+    
     .carousel-slide {
-        flex: 1 0 50%; /* 2 cards visible */
+        flex: 1 0 100%; /* 1 card visible */
+    }
+
+    .icons > a {
+        width: 50px;
+        height: 35px;
+        padding-top: 8px;
+        margin: 0 5px;
+    }
+
+    .icons > a img {
+        width: 30px;
+        height: 30px;
     }
 }
 
 @media (max-width: 576px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p, .description, #email {
+        font-size: 16px;
+    }
+    
     .carousel-slide {
-        flex: 1 0 100%; /* 1 card visible */
+        flex: 1 0 100%;
+    }
+
+    body, section {
+        padding: 10px;
+    }
+
+    .icons > a {
+        width: 40px;
+        height: 28px;
+        padding-top: 6px;
+        margin: 0 3px;
+    }
+
+    .icons > a img {
+        width: 25px;
+        height: 25px;
     }
 }
 
