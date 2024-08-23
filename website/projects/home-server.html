@@ -16,16 +16,58 @@
     <body>
         <header role="banner">
             <div class="background-blur"></div>
-            <h1>IGOR COUTO</h1>
+            <h1>My Raspberry Pi 5 Home Server</h1>
         </header>
     
         <main role="main">
             <section>
-                <h2>Home Server</h2>
-                <p>It's time for pie.</p>   
-                <p>TODO: describe here how this was set up.</p>        
+            
+                <p>I recently embarked on an exciting new project: setting up a home server using a Raspberry Pi 5. If you're anything like me, someone who's curious about networking, security, and the whole DevOps culture, then a home server is like your personal playground.</p>
+
+                <h2>Why Bother with a Home Server?</h2>
                 
-                <img src="../assets/home-server.jpg" alt="Project 2" width="400" height="500">
+                <p>Well, there were a few reasons. For one, it's an incredible learning opportunity. I'm diving deeper into networking, security, and experimenting with deployment practices and pipelines. This server acts as my sandbox—a place where I can break things, fix them, and ultimately learn a ton in the process.</p>
+                
+                <p>On top of that, I have several personal projects and apps that I've been working on. Hosting them myself is the perfect way to show them off, and it's like having my very own "production environment" to experiment with and refine my skills.</p>
+
+                <p>Additionally, improving the SEO and performance of my published applications was another goal I had in mind. Having control over the server environment gave me the flexibility to make the necessary tweaks to enhance their performance and visibility online.</p>
+
+                <h2>Why Raspberry Pi 5?</h2>
+                <p>When it came time to choose the hardware, I went with the Raspberry Pi 5. Here's why:</p>
+                <p><strong>Impressive Specs:</strong></p>
+                <ul>
+                    <li>64-bit quad-core ARM Cortex-A76 processor clocked at 2.4 GHz</li>
+                    <li>VideoCore VII GPU running at 800 MHz</li>
+                    <li>8 GB of LPDDR4X RAM</li>
+                    <li>Raspberry Pi silicon RP1 I/O controller chip</li>
+                    <li>PCIe 2.0 (It's possible to force PCI Express Gen 3.0 speeds)</li>
+                </ul>
+                <p><strong>Compact Size:</strong> One of the biggest factors in choosing the Raspberry Pi was its size. Living in an apartment means space is tight, and I don't have a dedicated area for a full-sized server. The Raspberry Pi sits neatly beside my router, and it's amazing how small it is considering the power it packs.</p>
+                <p><strong>Expandable:</strong> I grabbed a few extras to beef up my setup, including the Pimoroni NVMe Base for faster SSD storage, a GeekPi Cooler and a CAT 8 Ethernet Cable. Although a CAT 6 would have been sufficient, the small price difference led me to choose the CAT 8, because why not?</p>
+                <p><strong>Energy Efficiency:</strong> The Raspberry Pi 5 is pretty good on power, idling around 2.6W (or 3.5W with the NVMe base attached). It's nice to have something powerful yet energy-efficient.</p>
+                <p><strong>Budget:</strong> All in all, I spent just over 200 euros on the whole setup:
+                    Raspberry Pi 5 (€89,99), Pimoroni NVMe Base (€19,30), GeekPi Cooler (€15,23), Patriot P300 1TB SSD (€77,21), and an Ethernet Cable (€3,94). Although it is not the cheapest setup possible, it's ok considering its size and potential.</p>
+            
+                <img src="../assets/home-server.webp" alt="Project 2" width="400" height="500">
+                
+                <h2>Getting into Network Configuration and DNS</h2>
+                <p>One of the first things I did was sort out the network configuration. I'm using Cloudflare to manage my domain names. I've got a few projects hosted on this server, including: <a href="https://igorcouto.com">igorcouto.com</a>, <a href="https://avatarize.io">avatarize.io</a>, <a href="https://activities-api.com">activities-api.com</a> and so on.</p>
+                
+                <p>Configuring the server, firewall, and router was a real eye-opener. I learned a ton about networking and security, from setting up DNS records to tweaking firewall rules to keep things locked down. Additionally, setting up the environment on an ARM (aarch64) processor was a challenging experience.</p>
+            
+                <h2>Serving Applications</h2> 
+                <p>My Raspberry Pi is running Nginx, which is doing a great job of serving up my websites, apps, and APIs. Everything is isolated in Docker containers, keeping things organized and secure.</p>
+
+                <p>I've also integrated GitHub Actions into my projects, creating a complete CI/CD pipeline. This allows me to automatically build, test, and deploy updates directly to the server, ensuring that everything runs smoothly without manual intervention.</p>
+                
+                <p>Docker and GitHub Actions together provide a streamlined and efficient way to manage deployments, so I can focus on development without worrying about the technicalities of getting updates live.</p>
+
+                <h2>Observability</h2>
+                <p>To monitor everything, I set up Grafana with Prometheus and Loki. Now I can keep tabs on network usage, memory, CPU, temperature, logs, and more. It's satisfying to see all those metrics in real-time, and it helps me catch any issues before they become real problems. Even better, I've configured alerts to notify me via email if certain conditions are met.</p>
+                <img src="../assets/grafana.webp" alt="Grafana Charts" width="960" height="450">
+
+                <h2>Conclusion</h2>
+                <p>So, that's my Raspberry Pi 5 home server in a nutshell. It's been a fantastic learning experience, and it's really satisfying to see my projects live on something I built myself. Whether you  want to host your own projects or simply enjoy experimenting with technology, setting up a home server is an excellent way to get hands-on experience!</p>
 
             </section>
         </main>
@@ -33,7 +75,10 @@
 </html>
 
 <style>
+    p {
+        color: #c2c2c2
+    }
     body {
-        height: 100vh;
+        margin-bottom: 5%;
     }
 </style>
