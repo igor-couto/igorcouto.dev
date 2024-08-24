@@ -15,6 +15,7 @@ body {
     color: #fff;
     font-family: PlusJakartaSans, sans-serif;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 5%;
 }
 
 .background-blur {
@@ -167,7 +168,7 @@ p {
     transition: transform 0.3s ease, z-index 0.3s ease;
     position: relative;
     z-index: 1;
-    height: 380px; /* fixed height for the card */
+    height: 400px; /* fixed height for the card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
