@@ -130,7 +130,7 @@ p {
     margin: 50px auto;
     max-width: 100%;
     overflow: hidden;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .carousel-wrapper {
@@ -372,4 +372,24 @@ p {
 
 ul {
     text-align: left;
+}
+
+.view-all-projects {
+    text-align: center;
+}
+
+.view-all-projects .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25a6f9; 
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-all-projects .btn:hover {
+    background-color: #1a8cd8;
+    transform: scale(1.05);
 }

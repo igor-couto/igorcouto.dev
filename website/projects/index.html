@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#6BAA64" />
+    <meta name="description" content="All Projects" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>All Projects</title>
+
+    <style>
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 35%;
+            padding: 10px 20px 20px 20px; 
+        }
+
+        .card-img {
+            height: 300px;
+        }
+
+        .card {
+            height: 500px;
+        }
+
+        .card-content h3 {
+            margin: 10px 0px 20px 0px;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        section {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            max-width: 100%;
+            padding: 0 10%;
+        }
+
+        .search-filter {
+            margin: 2rem auto 1rem auto;
+            text-align: center;
+        }
+
+        .search-filter label {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+
+        .search-filter input {
+            width: 300px;
+            font-size: 1rem;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header role="banner">
+        <div class="background-blur"></div>
+        <h1>Projects</h1>
+        <span class="description">
+            Browse some of my personal projects below
+        </span>
+    </header>
+
+    <main role="main">
+
+    <section class="search-filter">
+        <label for="search-input">Search by name or tag:</label>
+        <input type="text" id="search-input" autofocus />
+    </section>
+
+    <section class="cards-container" id="projects-grid">
+
+    <div class="card" data-name="Story Nodes Editor" data-tags="html/css, javascript, joint.js">
+        <a href="https://igorcouto.com/projects/story-nodes-editor" class="card-link" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/story-nodes-editor.webp" alt="Story Nodes Editor" class="card-img">
+            <div class="card-content">
+            <h3>Story Nodes Editor</h3>
+            <p>Create and connect story nodes, making storyboarding interactive and intuitive</p>
+            <div class="tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">javascript</span>
+                <span class="tag">joint.js</span>
+            </div>
+            </div>
+        </a>
+        </div>
+
+        <div class="card" data-name="Dice Roll" data-tags=".net, html/css, javascript">
+        <a href="https://igorcouto.com/projects/dice-roll" class="card-link" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/dice-roll.webp" alt="Dice Roll" class="card-img">
+            <div class="card-content">
+            <h3>Dice Roll</h3>
+            <p>Roll a dice with smooth CSS animations and secure random number generation in the backend</p>
+            <div class="tags">
+                <span class="tag">.NET</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">javascript</span>
+            </div>
+            </div>
+        </a>
+        </div>
+
+      <div class="card" data-name="Avatarize" data-tags=".net, api, hashing, image manipulation">
+        <a href="https://avatarize.io" class="card-link" target="_blank">
+          <img src="../assets/avatarize.webp" alt="Avatarize" class="card-img">
+          <div class="card-content">
+            <h3>Avatarize</h3>
+            <p>Create unique avatars based on text input using hashing algorithms</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">API</span>
+              <span class="tag">Hashing</span>
+              <span class="tag">Image Manipulation</span>
+              <span class="tag">Image Manipulation</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Activities API" data-tags=".net, api, sqlite">
+        <a href="https://activities-api.com" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/activities-api.webp" alt="Activities API" class="card-img">
+          <div class="card-content">
+            <h3>Activities API</h3>
+            <p>Discover random things to do with this API</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">API</span>
+              <span class="tag">SQLite</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Home Server" data-tags="raspberry pi, network, infra, devops, observability">
+        <a href="https://igorcouto.com/projects/home-server.html" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/home-server.avif" alt="Home Server" class="card-img">
+          <div class="card-content">
+            <h3>Home Server</h3>
+            <p>A personal server setup using a Raspberry Pi 5, optimized to run all my applications</p>
+            <div class="tags">
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">Network</span>
+              <span class="tag">Infra</span>
+              <span class="tag">DevOps</span>
+              <span class="tag">Observability</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Valenca Theme" data-tags="visual studio code, theme">
+        <a href="https://marketplace.visualstudio.com/items?itemName=igor-couto.valenca-theme&ssr=false#overview" class="card-link"  target="_blank" rel="noopener noreferrer">
+          <img src="../assets/valenca.webp" alt="Valenca Theme" class="card-img">
+          <div class="card-content">
+            <h3>Valenca Theme</h3>
+            <p>A sleek, dark theme designed for Visual Studio Code</p>
+            <div class="tags">
+              <span class="tag">Visual Studio Code</span>
+              <span class="tag">Theme</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Ahoy! Chat" data-tags="aws, .net, mongodb, devops, whatsapp integration">
+        <a href="https://github.com/igor-couto/ahoy-chat" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/ahoy-chat.webp" alt="Ahoy Chat" class="card-img">
+          <div class="card-content">
+            <h3>Ahoy! Chat</h3>
+            <p>Chat system seamlessly integrated with WhatsApp for enhanced communication</p>
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">.NET</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">DevOps</span>
+              <span class="tag">WhatsApp Integration</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Face Recognition" data-tags=".net, wpf, computer vision">
+        <a href="https://github.com/igor-couto/face-recognition" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/face-recognition.webp" alt="Face Recognition" class="card-img">
+          <div class="card-content">
+            <h3>Face Recognition</h3>
+            <p>The basics of facial detection and recognition</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">WPF</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Payment Gateway Simulator" data-tags="aws, postgresql, .net, devops">
+        <a href="https://github.com/igor-couto/payment-gateway" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/payment-gateway.webp" alt="Payment Gateway" class="card-img">
+          <div class="card-content">
+            <h3>Payment Gateway Simulator</h3>
+            <p>Simulate payment processing with a merchant offering a way for shoppers to pay for their product</p>
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">.NET</span>
+              <span class="tag">DevOps</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Peek in π" data-tags="rust, cli, search algorithm">
+        <a href="https://github.com/igor-couto/peek-in-pi" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/peek-in-pi.webp" alt="Peek in Pi" class="card-img">
+          <div class="card-content">
+            <h3>Peek in π</h3>
+            <p>Rust program that lets you search for any number inside the digits of Pi</p>
+            <div class="tags">
+              <span class="tag">Rust</span>
+              <span class="tag">CLI</span>
+              <span class="tag">Search Algorithm</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="GeoStates Game" data-tags="javascript, html/css">
+        <a href="http://igorcouto.com/projects/guess-the-state" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/geostates.webp" alt="GeoStates" class="card-img">
+          <div class="card-content">
+            <h3>GeoStates Game</h3>
+            <p>A fun game focused on naming the states of various countries. For geography nerds</p>
+            <div class="tags">
+              <span class="tag">Javascript</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Wordle Clone" data-tags=".net, javascript, html/css">
+        <a href="http://igorcouto.com/projects/wordle" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/wordle.webp" alt="Wordle" class="card-img">
+          <div class="card-content">
+            <h3>Wordle Clone</h3>
+            <p>A clone of the popular word-guessing game</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">Javascript</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="resizer" data-tags=".net, cli">
+        <a href="https://github.com/igor-couto/resizer" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/resizer.webp" alt="resizer CLI" class="card-img">
+          <div class="card-content">
+            <h3>resizer</h3>
+            <p>CLI application that resizes an image or a folder of images</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Hangman Game" data-tags="rust">
+        <a href="https://github.com/igor-couto/hangman-rust" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/hangman-rust.webp" alt="Hangman Game" class="card-img">
+          <div class="card-content">
+            <h3>Hangman Game</h3>
+            <p>Classic game of Hangman, one of the first codes I wrote in Rust to learn about the language</p>
+            <div class="tags">
+              <span class="tag">Rust</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="myrepo" data-tags="rust, cli, github">
+        <a href="https://igorcouto.com/project/myrepo" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/myrepo.webp" alt="My Repo" class="card-img">
+          <div class="card-content">
+            <h3>myrepo</h3>
+            <p>A simple CLI tool to search & optionally clone GitHub repos by name</p>
+            <div class="tags">
+              <span class="tag">Rust</span>
+              <span class="tag">CLI</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Three.js Monsters" data-tags="javascript, node.js, three.js, web sockets, blender">
+        <a href="https://github.com/igor-couto/three-monster" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/threemonsters.webp" alt="Three Monsters" class="card-img">
+          <div class="card-content">
+            <h3>Three.js Monsters</h3>
+            <p>A browser-based card game featuring 3D animated monsters</p>
+            <div class="tags">
+              <span class="tag">Javascript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">Web Sockets</span>
+              <span class="tag">Blender</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Akaroa VSCode Theme" data-tags="visual studio code, theme">
+        <a href="https://github.com/igor-couto/vscode-akaroa-theme" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/akaroa.webp" alt="Akaroa Theme" class="card-img">
+          <div class="card-content">
+            <h3>Akaroa VSCode Theme</h3>
+            <p>An elegant dark theme crafted for Visual Studio Code</p>
+            <div class="tags">
+              <span class="tag">Visual Studio Code</span>
+              <span class="tag">Theme</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Quantum Zero Point Energy Field Coin Flipper" data-tags="javascript, react">
+        <a href="https://github.com/igor-couto/zero-point-energy-field-random-coin-flip" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/coin-flipper.webp" alt="Quantum Zero Point Energy Field Coin Flipper" class="card-img">
+          <div class="card-content">
+            <h3>Quantum Zero Point Energy Field Coin Flipper</h3>
+            <p>Heads or tails using the ANU QRNG API, measuring quantum vacuum fluctuations</p>
+            <div class="tags">
+              <span class="tag">Javascript</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Newsletter System" data-tags=".net, hangfire, angular, postgresql, specflow">
+        <a href="https://igorcouto.com/newsletter-api/api/swagger" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/newsletter.webp" alt="Newsletter System" class="card-img">
+          <div class="card-content">
+            <h3>Newsletter System</h3>
+            <p>A complete Newsletter Management System</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">Hangfire</span>
+              <span class="tag">Angular</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Specflow</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="3D Model Display" data-tags=".net, react, three.js">
+        <a href="https://github.com/igor-couto/3d-model-browser-display" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/3d-display.webp" alt="3D Model Display" class="card-img">
+          <div class="card-content">
+            <h3>3D Model Display</h3>
+            <p>Display .obj 3D Models in the browser</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">React</span>
+              <span class="tag">Three.js</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Movie Cup" data-tags=".net, react, javascript">
+        <a href="https://github.com/igor-couto/CopaFilmes" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/copa-filmes.webp" alt="Movie Cup" class="card-img">
+          <div class="card-content">
+            <h3>Movie Cup</h3>
+            <p>A competition to determine the best film!</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">React</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="EducAR Quadrics" data-tags="java, android, opengl, augmented reality">
+        <a href="https://www.researchgate.net/publication/336812656_EducAR_-Quadrics_A_Tool_to_Aid_teaching_of_Calculus_through_Augmented_Reality" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/educar-quadrics.avif" alt="EducAR Quadrics" class="card-img">
+          <div class="card-content">
+            <h3>EducAR Quadrics</h3>
+            <p>A mobile app to aid teaching of calculus through augmented reality</p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Android</span>
+              <span class="tag">OpenGL</span>
+              <span class="tag">Augmented Reality</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Personas" data-tags="react, javascript">
+        <a href="https://github.com/igor-couto/personas" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/personas.webp" alt="Personas" class="card-img">
+          <div class="card-content">
+            <h3>Personas</h3>
+            <p>Randomly generates fictional personas with detailed background information</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="replace-color" data-tags="cli, rust">
+        <a href="https://github.com/igor-couto/replace-color" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/replace-color.webp" alt="Replace Color" class="card-img">
+          <div class="card-content">
+            <h3>replace-color</h3>
+            <p>A Rust CLI tool for replacing one color in an image with another</p>
+            <div class="tags">
+              <span class="tag">CLI</span>
+              <span class="tag">Rust</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Detective Bacon" data-tags=".net, unity, blender, adobe photoshop">
+        <a href="https://igorcouto.com/projects/detective-bacon.html" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/detective-bacon.avif" alt="Detective Bacon" class="card-img">
+          <div class="card-content">
+            <h3>Detective Bacon</h3>
+            <p>A whimsical game where you play as a clever pig detective solving mysteries</p>
+            <div class="tags">
+              <span class="tag">.NET</span>
+              <span class="tag">Unity</span>
+              <span class="tag">Blender</span>
+              <span class="tag">Adobe Photoshop</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="LocalizAR UFJF" data-tags="java, android, geolocation, augmented reality">
+        <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/localizar-ufjf.webp" alt="LocalizAR UFJF" class="card-img">
+          <div class="card-content">
+            <h3>LocalizAR UFJF</h3>
+            <p>Indoor/outdoor geolocation with augmented reality & campus points of interest</p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Android</span>
+              <span class="tag">Geolocation</span>
+              <span class="tag">Augmented Reality</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="Wiki Linker" data-tags="c++, .net, html/css, data structures, adsense">
+        <a href="https://wiki-linker.com" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/wiki-linker.avif" alt="Wiki Linker" class="card-img">
+          <div class="card-content">
+            <h3>Wiki Linker</h3>
+            <p>Annotate texts with Wikipedia articles</p>
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">.NET</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">AdSense</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-name="ASCII Rust" data-tags="rust, cli">
+        <a href="https://github.com/igor-couto/rust-ascii" class="card-link" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/ascii.webp" alt="Rust ASCII" class="card-img">
+          <div class="card-content">
+            <h3>ASCII Rust</h3>
+            <p>A command-line tool for displaying the ASCII table in Rust</p>
+            <div class="tags">
+              <span class="tag">Rust</span>
+              <span class="tag">CLI</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const cards = document.querySelectorAll('.cards-container .card');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            cards.forEach(card => {
+            const name = card.getAttribute('data-name').toLowerCase();
+            const tags = card.getAttribute('data-tags').toLowerCase();
+
+            if (name.includes(searchTerm) || tags.includes(searchTerm))
+                card.style.display = 'block';
+            else 
+                card.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
