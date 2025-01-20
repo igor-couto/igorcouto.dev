@@ -381,7 +381,7 @@ ul {
 .view-all-projects .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #25a6f9; 
+    background-image: radial-gradient(circle at 0 0, #25a6f9, #244cf8);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
