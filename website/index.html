@@ -28,14 +28,14 @@
 
         <section>
             <h2>Projects</h2>
-            <p>Explore some of the personal projects I've been working on. They are my creative playground, where I experiment with new ideas and put into practice concepts I'm currently studying. Take a look and feel free to dive into the details!</p>
+            <p>Explore some projects I've been working on. They are my creative playground, where I experiment with new ideas and put into practice concepts I'm currently studying. Take a look and feel free to dive into the details!</p>
 
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <div class="carousel">
 
                         <div class="carousel-slide">
-                            <a href="https://avatarize.io" class="card-link"  target="_blank" >
+                            <a href="https://avatarize.io" class="card-link" target="_blank" >
                                 <div class="card">
                                     <img src="assets/avatarize.webp" alt="Avatarize" class="card-img">
                                     <div class="card-content">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="carousel-slide">
-                            <a href="https://activities-api.com" class="card-link"  target="_blank" rel="noopener noreferrer">
+                            <a href="https://activities-api.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
                                     <img src="assets/activities-api.webp" alt="Activities API" class="card-img">
                                     <div class="card-content">
@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="carousel-slide">
-                            <a href="https://marketplace.visualstudio.com/items?itemName=igor-couto.valenca-theme&ssr=false#overview" class="card-link"  target="_blank" rel="noopener noreferrer">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=igor-couto.valenca-theme&ssr=false#overview" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
                                     <img src="assets/valenca.webp" alt="Valenca Theme" class="card-img">
                                     <div class="card-content">
@@ -547,7 +547,7 @@
         <section>
             <h2>Contact</h2>
 
-            <p>Feel free to connect with me through the platforms below. Whether you have questions, collaborations in mind, or just want to say hello, I'm always happy to hear from you! You can find me at:</p>
+            <p>Feel free to connect with me through the platforms below. Whether you have questions, collaborations, or just want to say hello, I'm always happy to hear from you! You can find me at:</p>
 
             <div class="icons">
                 <a href="https://linkedin.com/in/igor-fcouto" aria-label="LinkedIn profile">
@@ -592,20 +592,20 @@
     };
 
     nextButton.addEventListener('click', () => {
-        if (currentIndex < slides.length - 1) {
+        if (currentIndex < slides.length - 1)
             currentIndex++;
-        } else {
+        else
             currentIndex = 0;
-        }
+        
         updateSlidePosition();
     });
 
     prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
+        if (currentIndex > 0)
             currentIndex--;
-        } else {
+        else
             currentIndex = slides.length - 1;
-        }
+        
         updateSlidePosition();
     });
 
