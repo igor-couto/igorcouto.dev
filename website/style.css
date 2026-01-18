@@ -263,6 +263,7 @@ p {
     gap: 10px;
     flex-wrap: wrap;
     flex: 1 1 auto;
+    min-width: 0;
 }
 
 .carousel-dot {
@@ -300,9 +301,21 @@ p {
     p, .description, #email {
         font-size: 18px;
     }
+
+    .description {
+        max-width: 100%;
+    }
     
     .carousel-slide {
         flex: 0 0 100%;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card-img {
+        height: 180px;
     }
 
     .carousel-controls {
@@ -358,12 +371,39 @@ p {
     }
 
     .carousel-controls {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
     }
 
     .carousel-button {
         width: 36px;
         height: 36px;
+    }
+
+    .carousel-dots {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 4px;
+        gap: 6px;
+        scrollbar-width: none;
+        min-width: 0;
+    }
+
+    .carousel-dots::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .carousel-dot.is-selected {
+        width: 18px;
     }
 
     .icons > a {
