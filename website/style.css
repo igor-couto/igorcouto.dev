@@ -376,34 +376,13 @@ p {
         gap: 8px;
     }
 
-    .carousel-button {
-        width: 36px;
-        height: 36px;
-    }
-
     .carousel-dots {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        padding: 6px 4px;
-        gap: 6px;
-        scrollbar-width: none;
-        min-width: 0;
-    }
-
-    .carousel-dots::-webkit-scrollbar {
         display: none;
     }
 
-    .carousel-dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .carousel-dot.is-selected {
-        width: 18px;
+    .carousel-button {
+        width: 36px;
+        height: 36px;
     }
 
     .icons > a {
@@ -416,6 +395,10 @@ p {
     .icons > a img {
         width: 25px;
         height: 25px;
+    }
+
+    .view-all-projects .btn {
+        margin-top: 16px;
     }
 }
 
