@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="theme-color" content="#6BAA64" />
+        <meta name="description" content="Igor Couto's personal website" />
+        <meta name="author" content="Igor Couto">
+        <meta property="og:title" content="Igor Couto">
+        <meta property="og:description" content="Igor Couto's personal website">
+        <meta property="og:url" content="http://igorcouto.com">
+        <link rel="icon" href="../assets/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="../style.css">
+        <title>Igor Couto</title>
+    </head>
+    <body>
+        <header role="banner">
+            <div class="background-blur"></div>
+            <h1>My pies</h1>
+        </header>
+    
+        <main role="main">
+            <section>
+                <p>I've collected a small pile of Raspberry Pis over time: four Pi 5s and a little Pi Zero 2 W: and for a while they ran things in a sort of organic, "wherever it landed" way. One box did everything: apps, databases, the web server, monitoring, my website. It worked, but it was one dead power supply away from taking my whole world down with it.</p>
+                <p>So I sat down and gave each Pi a single, clear job. The guiding idea was simple: separate state from compute. Things that hold data should live apart from things that just run. Here's where I landed.</p>
+                
+                <h2>pifive0: The Front Door</h2>
+                <img src="../assets/my-pies/pifive0.svg" alt="pifive0" width="400" height="500">
+                <p>Raspberry Pi 5 · 4GB · 250GB NVMe SSD</p>
+                <p>The single doorway to everything. I'm moving from nginx to Caddy here: it's modern, and its automatic HTTPS is hard to argue with. It terminates TLS, applies whatever routing rules I want, and passes traffic back to the apps on pifive1.</p>
+
+                <h2>pifive1: The Apps</h2>
+                <img src="../assets/my-pies/pifive1.svg" alt="pifive1" width="300" height="400">
+                <p>Raspberry Pi 5 · 8GB · 250GB NVMe SSD</p>
+                <p>Runs all my applications as Docker containers: backends, frontends, and my personal website (this one). The rule here is that everything is stateless: nothing important lives on this box, so if it dies I just redeploy.</p>
+
+                <h2>pifive2: The Workshop</h2>
+                <img src="../assets/my-pies/pifive2.svg" alt="pifive2" width="300" height="400">
+                <p>Raspberry Pi 5 · 4GB · 250GB NVMe SSD</p>
+                <p>My self-hosted GitHub Actions runners live here, so deployments build and ship from this machine. It also hosts Prometheus and Grafana, keeping my metrics and dashboards off the application box: so I can still see what's happening when something over there goes wrong.</p>
+                
+                <h2>pifive3: The Vault</h2>
+                <img src="../assets/my-pies/pifive3.svg" alt="pifive3" width="300" height="400">
+                <p>Raspberry Pi 5 · 8GB · two 250GB NVMe SSDs + a USB HDD</p>
+                <p>My data lives here. The two SSDs form a RAID1 mirror, so a dead disk doesn't mean dead data. An USB HDD drive servers as a real second backup copy.  There is a little bit of everything: Postgres, MongoDB, SQLServer and Redis.</p>
+
+                <h2>pizero: The Watchman</h2>
+                <img src="../assets/my-pies/pizero.svg" alt="pizero" width="150" height="250">
+                <p>Raspberry Pi Zero 2 W · 512MB · 16GB microSD</p>
+                <p>The little one has the simplest job: a small program that checks whether my services are healthy and emails me when they're not. Nothing fancy here just a C program doing this job.</p>
+
+                <h2>What's next</h2>
+                <p>This is a starting point and I already know the gaps: an off-site backup so a problem at home doesn't take everything with it, and a smarter monitor that can still reach me if the watchman itself goes quiet. But for now, every Pi has a purpose: and that alone makes the whole thing far easier to reason about.</p>
+            </section>
+        </main>
+    </body>
+</html>
+
+<style>
+    p { color: #c2c2c2 }
+</style>
