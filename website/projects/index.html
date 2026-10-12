@@ -33,7 +33,7 @@
 
         .cards-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
             gap: 30px;
             margin-top: 40px;
         }
@@ -56,12 +56,45 @@
         }
 
         .search-filter input {
+            box-sizing: border-box;
             width: 300px;
+            max-width: 100%;
             font-size: 1rem;
             padding: 5px;
             border-radius: 5px;
             border: 1px solid #999;
             outline: none;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 0 10px;
+            }
+
+            .card {
+                height: auto;
+            }
+
+            .card-img {
+                height: auto;
+                aspect-ratio: 16 / 9;
+            }
+
+            .card-content {
+                height: auto;
+                gap: 14px;
+            }
+
+            .card-content h3 {
+                margin: 10px 0 0;
+            }
+
+            .card-content p {
+                display: block;
+                overflow: visible;
+                -webkit-line-clamp: unset;
+                line-clamp: unset;
+            }
         }
     </style>
 </head>

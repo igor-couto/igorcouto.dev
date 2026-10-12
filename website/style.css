@@ -40,6 +40,17 @@ section {
     max-width: 75rem;
     padding: 0 15px;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-video {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 731 / 279;
+}
   
 h1 {
     font-family: "Source Sans Pro", sans-serif;

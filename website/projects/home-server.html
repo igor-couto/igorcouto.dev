@@ -22,16 +22,16 @@
         <main role="main">
             <section>
             
-                <p>I recently started building a home server with a Raspberry Pi 5. I'm interested in networking, security, and DevOps, and I figured a personal server would be a great way to experiment, learn and have my own playground.</p>
+                <p>I started putting together a small home server around a Raspberry Pi 5. Part of it was curiosity: I wanted a place where I could learn more about networking, security, deployments, and the boring details that only show up once something is actually running.</p>
 
                 <h2>Why Bother with a Home Server?</h2>
                 
-                <p>Well, there were a few reasons. For one, it's an incredible learning opportunity. I'm diving deeper into networking, security, and experimenting with deployment practices and pipelines. This server acts as my sandbox—a place where I can break things, fix them, and ultimately learn a ton in the process.</p>
+                <p>The main reason was control. I wanted somewhere to run my own projects without treating each one as a separate hosting problem. A home server also gives me room to try things, break them, and fix them without worrying too much about the consequences.</p>
                 
-                <p>On top of that, I have several personal projects and apps that I've been working on. Hosting them myself is the perfect way to show them off, and it's like having my very own "production environment".</p>
+                <p>I also liked the idea of having a small production-like setup at home. It's not the same as running infrastructure at work, of course, but it's close enough to make the lessons stick.</p>
 
                 <h2>Why Raspberry Pi 5?</h2>
-                <p>When it came time to choose the hardware, I went with the Raspberry Pi 5. Here's why:</p>
+                <p>For the hardware, I went with the Raspberry Pi 5. It was small enough for my apartment, cheap enough to experiment with, and powerful enough for the kind of services I wanted to run.</p>
                 <p><strong>Good Specs:</strong></p>
                 <ul>
                     <li>64-bit quad-core ARM Cortex-A76 processor clocked at 2.4 GHz</li>
@@ -39,34 +39,34 @@
                     <li>8 GB of LPDDR4X RAM</li>
                     <li>PCIe 2.0 (It's possible to force PCI Express Gen 3.0 speeds)</li>
                 </ul>
-                <p><strong>Compact Size:</strong> One of the biggest factors in choosing the Raspberry Pi was its size. Living in an apartment means space is tight, and I don't have a dedicated area for a full-sized server. The Raspberry Pi sits neatly beside my router, and it's amazing how small it is considering the power it packs.</p>
-                <p><strong>Expandable:</strong> I grabbed a few extras to beef up my setup, including the Pimoroni NVMe Base for faster SSD storage, a GeekPi Cooler and a CAT 8 Ethernet Cable. Although a CAT 6 would have been sufficient, the small price difference led me to choose the CAT 8, because why not?</p>
-                <p><strong>Energy Efficiency:</strong> The Raspberry Pi 5 is pretty good on power, idling around 2.6W (or 3.5W with the NVMe base attached). It's nice to have something powerful yet energy-efficient.</p>
-                <p><strong>Budget:</strong> All in all, I spent just over 200 euros on the whole setup:
-                    Raspberry Pi 5 (€89,99), Pimoroni NVMe Base (€19,30), GeekPi Cooler (€15,23), Patriot P300 1TB SSD (€77,21), and an Ethernet Cable (€3,94). Although it is not the cheapest setup possible, it's ok considering its size and potential.</p>
+                <p><strong>Compact Size:</strong> Space matters when you live in an apartment. I don't have a spare corner for a full server, so the Pi sitting next to the router is a big advantage.</p>
+                <p><strong>Expandable:</strong> I added a Pimoroni NVMe Base for SSD storage, a GeekPi Cooler, and a CAT 8 Ethernet cable. CAT 6 would have been fine, but the price difference was tiny, so I just went with the overkill option.</p>
+                <p><strong>Energy Efficiency:</strong> Power usage was another factor. The Raspberry Pi 5 idles at around 2.6W, or about 3.5W with the NVMe base attached, which makes it easy to leave on all the time.</p>
+                <p><strong>Budget:</strong> The full setup came to a little over 200 euros:
+                    Raspberry Pi 5 (EUR 89,99), Pimoroni NVMe Base (EUR 19,30), GeekPi Cooler (EUR 15,23), Patriot P300 1TB SSD (EUR 77,21), and an Ethernet cable (EUR 3,94). It wasn't the cheapest possible build, but it felt like a good balance for the size and flexibility.</p>
             
-                <img src="../assets/home-server.avif" alt="Project 2" width="400" height="500">
+                <img src="../assets/home-server.avif" alt="Raspberry Pi 5 home server" width="400" height="500">
                 
                 <h2>Getting into Network Configuration and DNS</h2>
-                <p>One of the first things I did was sort out the network configuration. I'm using Cloudflare to manage my domain names. I've got a few projects hosted on this server, including: <a href="https://igorcouto.com">igorcouto.com</a>, <a href="https://avatarize.io">avatarize.io</a>, <a href="https://activities-api.com">activities-api.com</a> and so on.</p>
+                <p>One of the first jobs was sorting out the network side. I use Cloudflare for DNS, and the server now handles a few of my projects, including <a href="https://igorcouto.com">igorcouto.com</a>, <a href="https://avatarize.io">avatarize.io</a>, <a href="https://activities-api.com">activities-api.com</a>, and a few smaller things.</p>
                 
-                <p>Configuring the server, firewall, and router was a real eye-opener. I learned a ton about networking and security, from setting up DNS records to tweaking firewall rules to keep things locked down. Additionally, setting up the environment on an ARM (aarch64) processor was a challenging experience.</p>
+                <p>This was the part where the project stopped being theoretical. I had to deal with DNS records, router rules, firewall settings, and a few ARM-specific problems because the Pi runs on aarch64. None of it was especially glamorous, but it was exactly the kind of work I wanted to understand better.</p>
             
                 <h2>Serving Applications</h2> 
-                <p>My Raspberry Pi is running Nginx, which is doing a great job of serving up my websites, apps, and APIs. Everything is isolated in Docker containers, keeping things organized and secure.</p>
+                <p>The Pi runs Nginx in front of the websites, apps, and APIs. The services themselves run in Docker containers, which keeps the setup easier to reason about and makes it less painful to move things around.</p>
 
-                <p>I've also integrated GitHub Actions into my projects, creating a complete CI/CD pipeline. This allows me to automatically build, test, and deploy updates directly to the server, ensuring that everything runs smoothly without manual intervention.</p>
+                <p>I also wired my projects into GitHub Actions. A normal push can build, test, and deploy the latest version to the server without me SSHing into the Pi every time.</p>
                 
-                <p>Docker and GitHub Actions together provide a streamlined and efficient way to manage deployments, so I can focus on development without worrying about the technicalities of getting updates live.</p>
+                <p>It's a simple setup, but that's the point. Docker gives each app a clean boundary, and GitHub Actions handles the repetitive deployment steps.</p>
 
                 <img src="../assets/home-server-diagram.webp" alt="Home Server Diagram" width="1200" height="367">
 
                 <h2>Observability</h2>
-                <p>To monitor everything, I set up Grafana with Prometheus and Loki. Now I can keep tabs on network usage, memory, CPU, temperature, logs, and more. It's satisfying to see all those metrics in real-time, and it helps me catch any issues before they become real problems. Even better, I've configured alerts to notify me via email if certain conditions are met.</p>
+                <p>For monitoring, I set up Grafana with Prometheus and Loki. I can check network usage, memory, CPU, temperature, and logs from one place. I also added email alerts for the things I actually care about, because dashboards are only useful if I remember to look at them.</p>
                 <img src="../assets/grafana.webp" alt="Grafana Charts" width="960" height="450">
 
                 <h2>Conclusion</h2>
-                <p>So, that's my Raspberry Pi 5 home server in a nutshell. It's been really satisfying to see my projects live on something I built myself. Whether you  want to host your own projects or simply enjoy experimenting with technology, setting up a home server is an excellent way to get hands-on experience!</p>
+                <p>This started as a small experiment, but it has become the place where most of my personal projects live. The best part is that it feels understandable: if something breaks, I know where to look, and if I want to change how deployments or monitoring work, I can just try it.</p>
 
             </section>
         </main>
