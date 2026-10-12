@@ -11,31 +11,103 @@
     <title>All Projects</title>
 
     <style>
+        body {
+            box-sizing: border-box;
+            min-height: 100vh;
+            margin-bottom: 0;
+            padding-bottom: 48px;
+        }
+
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
             gap: 24px;
-            margin-top: 24px;
+            margin-top: clamp(32px, 4vw, 48px);
+        }
+
+        .cards-container[hidden],
+        .cards-container .card[hidden] {
+            display: none;
         }
 
         .search-filter {
-            margin: 2rem auto 1rem auto;
+            margin: 1rem auto 0;
             text-align: center;
         }
 
-        .search-filter label {
-            font-size: 1.2rem;
-            margin-right: 1rem;
+        .search-field {
+            position: relative;
+            max-width: 440px;
+            margin: auto;
+        }
+
+        .search-field svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #93a4b8;
+            pointer-events: none;
         }
 
         .search-filter input {
             box-sizing: border-box;
-            width: 300px;
+            width: 100%;
             max-width: 100%;
+            min-height: 48px;
+            font: inherit;
             font-size: 1rem;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #999;
+            padding: 12px 16px 12px 46px;
+            border-radius: 10px;
+            border: 1px solid #526176;
+            background: #161d27;
+            color: #f1f5f9;
+            caret-color: #8acfff;
+            color-scheme: dark;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-filter input::placeholder {
+            color: #93a4b8;
+        }
+
+        .search-filter input:hover {
+            border-color: #7892ae;
+        }
+
+        .search-filter input:focus {
+            outline: 2px solid #8acfff;
+            outline-offset: 0;
+            border-color: transparent;
+            box-shadow: 0 0 0 5px rgba(138, 207, 255, 0.08);
+        }
+
+        .search-status {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip-path: inset(50%);
+            white-space: nowrap;
+        }
+
+        .empty-state {
+            margin-top: 48px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-top: 1px solid #303640;
+        }
+
+        .empty-state h2,
+        .empty-state p {
+            text-align: center;
+            margin: 0 0 16px;
+        }
+
+        .empty-state .btn {
+            font: inherit;
+            border: 1px solid transparent;
+            cursor: pointer;
         }
 
     </style>
@@ -43,6 +115,9 @@
 <body>
 
     <header role="banner">
+            <nav class="site-nav" aria-label="Site navigation">
+                <a href="/"><span aria-hidden="true">&larr;</span> Back to home</a>
+            </nav>
         <div class="background-blur"></div>
         <h1>Projects</h1>
         <span class="description">
@@ -53,8 +128,14 @@
     <main role="main">
 
     <section class="search-filter">
-        <label for="search-input">Search by name or tag:</label>
-        <input type="text" id="search-input" autofocus />
+        <div class="search-field">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+                <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                <path d="m16 16 4.5 4.5" stroke-linecap="round"></path>
+            </svg>
+            <input type="search" id="search-input" placeholder="Search by name or tag" aria-label="Search by name or tag" aria-controls="projects-grid" />
+        </div>
+        <span id="search-status" class="search-status" role="status"></span>
     </section>
 
     <section class="cards-container" id="projects-grid">
@@ -720,24 +801,46 @@
       </div>
 
     </section>
+    <section id="no-results" class="empty-state" aria-labelledby="no-results-title" hidden>
+        <h2 id="no-results-title">No projects found</h2>
+        <p>Try a different name or technology, or browse all projects.</p>
+        <button type="button" id="clear-search" class="btn">Clear search</button>
+    </section>
   </main>
 
     <script>
         const searchInput = document.getElementById('search-input');
         const cards = document.querySelectorAll('.cards-container .card');
+        const projectsGrid = document.getElementById('projects-grid');
+        const noResults = document.getElementById('no-results');
+        const searchStatus = document.getElementById('search-status');
+        const clearSearch = document.getElementById('clear-search');
 
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
+        const filterProjects = () => {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            let matchCount = 0;
 
             cards.forEach(card => {
-                const name = card.getAttribute('data-name').toLowerCase();
-                const tags = card.getAttribute('data-tags').toLowerCase();
+                const name = card.querySelector('h3').textContent.toLowerCase();
+                const tags = card.querySelector('.tags').textContent.toLowerCase();
+                const matches = name.includes(searchTerm) || tags.includes(searchTerm);
 
-                if (name.includes(searchTerm) || tags.includes(searchTerm))
-                    card.style.display = 'block';
-                else 
-                    card.style.display = 'none';
+                card.hidden = !matches;
+                if (matches) matchCount++;
             });
+
+            projectsGrid.hidden = matchCount === 0;
+            noResults.hidden = matchCount !== 0;
+            searchStatus.textContent = matchCount === 0
+                ? 'No projects found'
+                : `${matchCount} ${matchCount === 1 ? 'project' : 'projects'} found`;
+        };
+
+        searchInput.addEventListener('input', filterProjects);
+        clearSearch.addEventListener('click', () => {
+            searchInput.value = '';
+            filterProjects();
+            searchInput.focus();
         });
     </script>
 

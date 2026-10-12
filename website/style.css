@@ -59,6 +59,8 @@ h1 {
     letter-spacing: 0.08em;
     line-height: 1.15;
     font-style: normal;
+    /* Keep descenders inside the gradient's painted area. */
+    padding-bottom: 0.15em;
     margin: 0 0 14px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -98,6 +100,29 @@ header {
 
 .hero h1 {
     font-size: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+.site-nav {
+    display: flex;
+    max-width: 75rem;
+    margin: 0 auto 16px;
+    text-align: left;
+}
+
+.site-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .home-section {
