@@ -12,23 +12,16 @@
 </head>
 
 <body>
-    <header role="banner">
+    <header class="hero" role="banner">
         <div class="background-blur"></div>
         <h1>IGOR COUTO</h1>
-        <span class="description">
-            I'm a software engineer living in Porto, Portugal
-        </span>
+        <p class="description">Software engineer in Porto, Portugal</p>
     </header>
 
     <main role="main">
-        <section>
-            <h2>Pleased to meet you</h2>
-            <p>This is my website, serving as a contact hub and a showcase for some of my personal projects.</p>
-        </section>
-
-        <section>
+        <section id="projects" class="home-section" tabindex="-1">
             <h2>Projects</h2>
-            <p>Explore some projects I've been working on. They are my creative playground, where I experiment with new ideas and put into practice concepts I'm currently studying. Take a look and feel free to dive into the details!</p>
+            <p class="section-intro">My creative playground, where I experiment with new ideas and put into practice concepts I'm currently studying.</p>
 
             <div class="carousel-container embla">
                 <div class="embla__viewport">
@@ -37,7 +30,9 @@
                     <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/github-self-hosted-runner-manager" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/github-self-host-runner-preview.webp" alt="GitHub Self-Hosted Runner" class="card-img">
+                                    <div class="card-media card-media--runner">
+                                        <img src="assets/github-self-host-runner-preview.webp" alt="GitHub Self-Hosted Runner" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>GitHub Self-Hosted Runner Manager</h3>
                                         <p>A manager for GitHub Actions runners on your Linux server</p>
@@ -55,7 +50,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://orbital-sentinel.igorcouto.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/orbital-sentinel.webp" alt="Orbital Sentinel" class="card-img">
+                                    <div class="card-media card-media--orbital">
+                                        <img src="assets/orbital-sentinel.webp" alt="Orbital Sentinel" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Orbital Sentinel</h3>
                                         <p>Real-time space traffic monitoring and conjunction detection using real orbital data.</p>
@@ -75,7 +72,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/my-pies.html" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/my-pies.webp" alt="My Pies" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/my-pies.webp" alt="My Pies" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>My Pies</h3>
                                         <p>A collection of Raspberry Pi servers running different services at my home.</p>
@@ -94,7 +93,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://powerle.igorcouto.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/powerle.webp" alt="Powerle" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/powerle.webp" alt="Powerle" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Powerle</h3>
                                         <p>Guess the hidden country from its electricity generation mix</p>
@@ -111,7 +112,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://no-bs-pdf.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/no-bs-pdf.png" alt="No BS PDF Editor" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/no-bs-pdf.png" alt="No BS PDF Editor" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>No BS PDF Editor</h3>
                                         <p>A no-nonsense PDF editor that runs entirely in the browser, with no uploads or accounts</p>
@@ -130,7 +133,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://theoretical-maximum.igorcouto.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/theoretical-maximum.webp" alt="Theoretical Maximum" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/theoretical-maximum.webp" alt="Theoretical Maximum" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Theoretical Maximum</h3>
                                         <p>Wake up aboard a slow alien ship and talk to its crew, one alien at a time</p>
@@ -148,7 +153,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://screen-glow.app" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/screen-glow.png" alt="Screen Glow" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/screen-glow.png" alt="Screen Glow" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Screen Glow</h3>
                                         <p>Turn any screen into an adjustable light with colors, brightness control, fullscreen mode, and wake lock</p>
@@ -166,7 +173,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://mapmynoise.igorcouto.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/mapmynoise.webp" alt="Map My Noise" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/mapmynoise.webp" alt="Map My Noise" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Map My Noise</h3>
                                         <p>Map noise reports and visualize community sound hotspots over time</p>
@@ -184,7 +193,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="assets/power-grid-telemetry-hub.webp" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/power-grid-telemetry-hub.webp" alt="Power Grid Telemetry Hub" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/power-grid-telemetry-hub.webp" alt="Power Grid Telemetry Hub" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Power Grid Telemetry Hub</h3>
                                         <p>Simulate and display data from a power grid</p>
@@ -203,7 +214,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://avatarize.io" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/avatarize.webp" alt="Avatarize" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/avatarize.webp" alt="Avatarize" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Avatarize</h3>
                                         <p>Create unique avatars based on text input using hashing algorithms</p>
@@ -221,7 +234,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://activities-api.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/activities-api.webp" alt="Activities API" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/activities-api.webp" alt="Activities API" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Activities API</h3>
                                         <p>Discover random things to do with this API</p>
@@ -238,7 +253,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/home-server.html" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/home-server.avif" alt="Home Server" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/home-server.avif" alt="Home Server" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Home Server</h3>
                                         <p>A personal server setup using a Raspberry Pi 5, optimized to run all my applications</p>
@@ -257,7 +274,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://marketplace.visualstudio.com/items?itemName=igor-couto.valenca-theme&ssr=false#overview" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/valenca.webp" alt="Valenca Theme" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/valenca.webp" alt="Valenca Theme" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Valenca Theme</h3>
                                         <p>A sleek, dark theme designed for Visual Studio Code</p>
@@ -273,7 +292,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/ahoy-chat" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/ahoy-chat.webp" alt="Ahoy Chat" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/ahoy-chat.webp" alt="Ahoy Chat" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Ahoy! Chat</h3>
                                         <p>Chat system seamlessly integrated with WhatsApp for enhanced communication</p>
@@ -292,7 +313,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/face-recognition" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/face-recognition.webp" alt="Face Recognition" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/face-recognition.webp" alt="Face Recognition" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Face Recognition</h3>
                                         <p>The basics of facial detection and recognition</p>
@@ -309,7 +332,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/payment-gateway" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/payment-gateway.webp" alt="Payment Gateway" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/payment-gateway.webp" alt="Payment Gateway" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Payment Gateway Simulator</h3>
                                         <p>Simulate payment processing by allowing  a merchant to offer a way for their shoppers to pay for their product</p>
@@ -327,7 +352,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/peek-in-pi" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/peek-in-pi.webp" alt="Peek in Pi" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/peek-in-pi.webp" alt="Peek in Pi" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Peek in π</h3>
                                         <p>Rust program that lets you search for any number inside the digits of Pi</p>
@@ -344,7 +371,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="http://igorcouto.com/projects/guess-the-state" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/geostates.webp" alt="GeoStates" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/geostates.webp" alt="GeoStates" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>GeoStates Game</h3>
                                         <p>A fun game focused on naming the states of various countries. For geography nerds</p>
@@ -360,7 +389,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="http://igorcouto.com/projects/wordle" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/wordle.webp" alt="Wordle" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/wordle.webp" alt="Wordle" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Wordle Clone</h3>
                                         <p>A clone of the popular word-guessing game</p>
@@ -377,7 +408,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/resizer" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/resizer.webp" alt="My Repo" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/resizer.webp" alt="My Repo" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>resizer</h3>
                                         <p>CLI application that resizes a image or a folder containing images</p>
@@ -393,7 +426,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/hangman-rust" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/hangman-rust.webp" alt="Hangman Game" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/hangman-rust.webp" alt="Hangman Game" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Hangman Game</h3>
                                         <p>Classic game of Hangman, one of the first codes I wrote in Rust to learn about the language</p>
@@ -408,7 +443,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/project/myrepo" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/myrepo.webp" alt="My Repo" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/myrepo.webp" alt="My Repo" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>myrepo</h3>
                                         <p>myrepo is a simple CLI tool that lets users search and optionally clone GitHub repos by name, making it a valuable addition to any developer's toolkit</p>
@@ -425,7 +462,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/three-monster" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/threemonsters.webp" alt="Three Monsters" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/threemonsters.webp" alt="Three Monsters" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Three.js Monsters</h3>
                                         <p>A browser-based card game featuring 3D animated monsters</p>
@@ -444,7 +483,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/vscode-akaroa-theme" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/akaroa.webp" alt="Akaroa Theme" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/akaroa.webp" alt="Akaroa Theme" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Akaroa VSCode Theme</h3>
                                         <p>An elegant dark theme crafted for Visual Studio Code</p>
@@ -460,7 +501,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/zero-point-energy-field-random-coin-flip" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/coin-flipper.webp" alt="Quantum Zero Point Energy Field Coin Flipper" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/coin-flipper.webp" alt="Quantum Zero Point Energy Field Coin Flipper" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Quantum Zero Point Energy Field Coin Flipper</h3>
                                         <p>Heads or tails using the ANU QRNG API with random numbers generated at the lab by measuring the quantum fluctuations of the vacuum</p>
@@ -476,7 +519,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/newsletter-api/api/swagger" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/newsletter.webp" alt="Newsletter System" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/newsletter.webp" alt="Newsletter System" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Newsletter System</h3>
                                         <p>A complete Newsletter Management System</p>
@@ -495,7 +540,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/3d-model-browser-display" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/3d-display.webp" alt="3D Model Display" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/3d-display.webp" alt="3D Model Display" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>3D Model Display</h3>
                                         <p>Display .obj 3D Models in the browser</p>
@@ -512,7 +559,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/copa-de-filmes" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/copa-filmes.webp" alt="Movie Cup" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/copa-filmes.webp" alt="Movie Cup" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Movie Cup</h3>
                                         <p>A competition to determine the best film!</p>
@@ -529,7 +578,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://www.researchgate.net/publication/336812656_EducAR_-Quadrics_A_Tool_to_Aid_teaching_of_Calculus_through_Augmented_Reality" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/educar-quadrics.avif" alt="EducAR Quadrics" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/educar-quadrics.avif" alt="EducAR Quadrics" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>EducAR Quadrics</h3>
                                         <p>A mobile app to aid teaching of calculus through augmented reality</p>
@@ -547,7 +598,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/personas" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/personas.webp" alt="Personas" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/personas.webp" alt="Personas" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Personas</h3>
                                         <p>Randomly generates fictional personas with detailed background information</p>
@@ -563,7 +616,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/replace-color" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/replace-color.webp" alt="Replace Color" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/replace-color.webp" alt="Replace Color" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>replace-color</h3>
                                         <p>A Rust CLI tool for replacing one color in an image with another</p>
@@ -579,7 +634,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/detective-bacon.html" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/detective-bacon.avif" alt="Detective Bacon" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/detective-bacon.avif" alt="Detective Bacon" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Detective Bacon</h3>
                                         <p>A whimsical game where you play as a clever pig detective solving mysteries</p>
@@ -597,7 +654,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="#" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/localizar-ufjf.webp" alt="Replace Color" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/localizar-ufjf.webp" alt="Replace Color" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>LocalizAR UFJF</h3>
                                         <p>Mobile app for indoor and outdoor geolocation with augmented reality and information about points of interest in the campus</p>
@@ -615,7 +674,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://wiki-linker.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/wiki-linker.avif" alt="Wiki Linker" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/wiki-linker.avif" alt="Wiki Linker" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Wiki Linker</h3>
                                         <p>Annotate texts with wikipedia articles</p>
@@ -634,7 +695,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/story-nodes-editor" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/story-nodes-editor.webp" alt="Story Nodes Editor" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/story-nodes-editor.webp" alt="Story Nodes Editor" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Story Nodes Editor</h3>
                                         <p>Create and connect story nodes, making storyboarding interactive and intuitive</p>
@@ -651,7 +714,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://igorcouto.com/projects/dice-roll" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/dice-roll.webp" alt="Dice Roll" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/dice-roll.webp" alt="Dice Roll" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Dice Roll</h3>
                                         <p>Roll a dice with smooth CSS animations and secure random number generation in the backend</p>
@@ -668,7 +733,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/rust-ascii" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/ascii.webp" alt="Rust ASCII" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/ascii.webp" alt="Rust ASCII" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>ASCII Rust</h3>
                                         <p>A command-line tool for displaying the ASCII table in Rust</p>
@@ -684,7 +751,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://github.com/igor-couto/pixel-flags" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/pixel-flags.webp" alt="Pixel Flags" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/pixel-flags.webp" alt="Pixel Flags" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Pixel Flags</h3>
                                         <p>A collection of pixel art flags for various countries</p>
@@ -700,7 +769,9 @@
                         <div class="carousel-slide embla__slide">
                             <a href="https://movies-api.com" class="card-link" target="_blank" rel="noopener noreferrer">
                                 <div class="card">
-                                    <img src="assets/movies-api.webp" alt="Movies API" class="card-img">
+                                    <div class="card-media">
+                                        <img src="assets/movies-api.webp" alt="Movies API" class="card-img">
+                                    </div>
                                     <div class="card-content">
                                         <h3>Movies API</h3>
                                         <p>Web API that provides movie information similar to what you'd find on IMDb, such as release dates, genres, and more.</p>
@@ -729,10 +800,10 @@
 
         </section>
 
-        <section>
+        <section id="contact" class="home-section" tabindex="-1">
             <h2>Contact</h2>
 
-            <p>Feel free to connect with me through the platforms below. Whether you have questions, collaborations, or just want to say hello, I'm always happy to hear from you! You can find me at:</p>
+            <p class="section-intro">Feel free to get in touch, whether you have questions, collaborations, or just want to say hello. I'm always happy to hear from you!</p>
 
             <div class="icons">
                 <a href="https://linkedin.com/in/igor-fcouto" aria-label="LinkedIn profile">
