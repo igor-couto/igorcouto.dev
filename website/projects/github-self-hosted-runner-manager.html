@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#1e2126">
+    <meta name="description" content="Meet Runner Room: an open-source dashboard to monitor and manage self-hosted GitHub Actions runners on your Linux server or Raspberry Pi.">
+    <meta name="author" content="Igor Couto">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Runner Room — GitHub Self-Hosted Runner Manager">
+    <meta property="og:description" content="Your runners. Your server. One clear view. Monitor jobs, understand server health, and manage your GitHub Actions runners.">
+    <meta property="og:url" content="https://www.igorcouto.com/projects/github-self-hosted-runner-manager.html">
+    <meta property="og:image" content="https://www.igorcouto.com/assets/github-self-host-runner-preview.webp">
+    <meta property="og:image:alt" content="Runner Room dashboard showing runner status and server resources with sample data">
+    <link rel="canonical" href="https://www.igorcouto.com/projects/github-self-hosted-runner-manager.html">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="runner-room.css">
+    <title>Runner Room — GitHub Self-Hosted Runner Manager | Igor Couto</title>
+</head>
+<body class="runner-page">
+    <header class="runner-header">
+        <nav class="site-nav" aria-label="Site navigation">
+            <a href="/"><span aria-hidden="true">&larr;</span> Back to home</a>
+            <a href="/projects/">All projects <span aria-hidden="true">&rarr;</span></a>
+        </nav>
+        <div class="background-blur" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="runner-hero" aria-labelledby="runner-title">
+            <div class="runner-intro">
+                <p class="runner-eyebrow">GitHub self-hosted runner manager</p>
+                <h1 id="runner-title">Runner Room</h1>
+                <p class="runner-tagline">Your runners. Your server.<br>One clear view.</p>
+                <p class="runner-summary">See what your GitHub Actions runners are doing, understand the machine behind them, and manage them from one dashboard on your own Linux server.</p>
+                <div class="runner-actions">
+                    <a class="btn runner-github-link" href="https://github.com/igor-couto/github-self-hosted-runner-manager">
+                        <img src="../assets/github/GitHub_Invertocat_White_Clearspace.svg" width="32" height="32" alt="">
+                        View on GitHub
+                    </a>
+                </div>
+                <p class="runner-note">Open source. MIT licensed. Built by Igor Couto.</p>
+            </div>
+            <figure class="runner-preview">
+                <a href="../assets/github-self-host-runner-preview.webp" aria-label="View the full-size Runner Room dashboard screenshot">
+                    <img src="../assets/github-self-host-runner-preview.webp" width="1679" height="1133" alt="Runner Room demo dashboard showing four runners, busy and idle states, GitHub connectivity, and server resources" fetchpriority="high">
+                </a>
+                <figcaption>Runner overview with sample data <span aria-hidden="true"></span></figcaption>
+            </figure>
+        </section>
+
+        <section class="runner-benefits" aria-labelledby="benefits-title">
+            <div class="runner-section-heading">
+                <p class="runner-eyebrow">From homelab to build server</p>
+                <h2 id="benefits-title">Less guesswork between builds.</h2>
+                <p>You own the hardware. Runner Room brings its runners, jobs, and health into focus.</p>
+            </div>
+            <div class="runner-feature-grid">
+                <article class="runner-feature">
+                    <span class="runner-feature-number" aria-hidden="true">MONITOR</span>
+                    <h3>Know what is running</h3>
+                    <p>Find busy and idle runners, inspect current jobs, and dig into diagnostic logs. Local monitoring works without a GitHub token.</p>
+                </article>
+                <article class="runner-feature">
+                    <span class="runner-feature-number" aria-hidden="true">UNDERSTAND</span>
+                    <h3>See the host behind the job</h3>
+                    <p>Track CPU, memory, disks, network traffic, and temperatures alongside per-runner resource usage. Keep an eye on your Raspberry Pi or Linux build server.</p>
+                </article>
+                <article class="runner-feature">
+                    <span class="runner-feature-number" aria-hidden="true">MANAGE</span>
+                    <h3>Take care of your runners</h3>
+                    <p>Register, import, start, stop, drain, and update runners on your host. Enable management through guided setup on a native installation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="runner-integration" aria-labelledby="integration-title">
+            <div>
+                <p class="runner-eyebrow">Works with GitHub Actions</p>
+                <h2 id="integration-title">Connect the job<br>to the bigger picture.</h2>
+                <p>Connect GitHub to bring workflow runs, jobs, and steps into the same dashboard as your local runners.</p>
+                <a class="runner-text-link" href="https://github.com/igor-couto/github-self-hosted-runner-manager/blob/main/docs/github-sync.md">Read the integration guide <span aria-hidden="true"></span></a>
+            </div>
+            <dl class="runner-integration-details">
+                <div>
+                    <dt>Your repositories, in one view</dt>
+                    <dd>Choose which repositories to follow. Runner Room uses the GitHub API to synchronize workflow activity and check runner connectivity.</dd>
+                </div>
+                <div>
+                    <dt>Start local. Connect when you need it.</dt>
+                    <dd>Add a personal access token or GitHub App for synchronization. Runner management has its own permission setup.</dd>
+                </div>
+                <div>
+                    <dt>Clear about what it knows</dt>
+                    <dd>Local process activity and GitHub connectivity are separate signals. The integration currently supports GitHub.com.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="runner-setup" id="get-started" aria-labelledby="setup-title">
+            <div class="runner-section-heading">
+                <p class="runner-eyebrow">Make it part of your setup</p>
+                <h2 id="setup-title">At home on your own hardware.</h2>
+                <p>Built for Linux with systemd and glibc, on x64, ARM32 (ARMv7+), and ARM64.</p>
+            </div>
+            <ol class="runner-steps">
+                <li><h3>Install on your runner server</h3><p>The native installer includes the .NET runtime and sets up a service that starts after reboot. No SDK or Docker required.</p></li>
+                <li><h3>Open your dashboard</h3><p>Point it at your runner folder, then open the dashboard on your trusted local network. Optional sign-in and roles let you control access.</p></li>
+                <li><h3>Make it yours</h3><p>Arrange widgets, switch themes, or use TV mode for a wall display. Prefer a terminal? A CLI and terminal dashboard are included.</p></li>
+            </ol>
+            <div class="runner-actions">
+                <a class="btn" href="https://github.com/igor-couto/github-self-hosted-runner-manager/blob/main/docs/installation.md">Installation guide <span aria-hidden="true"></span></a>
+            </div>
+        </section>
+
+        <section class="runner-support" aria-labelledby="support-title">
+            <div>
+                <h2 id="support-title">Built in the open. Better with feedback.</h2>
+                <p>Try Runner Room, suggest an improvement, or help build the next feature.</p>
+            </div>
+            <div class="runner-support-links">
+                <a class="runner-text-link" href="https://github.com/igor-couto/github-self-hosted-runner-manager/issues">Issues &amp; ideas <span aria-hidden="true"></span></a>
+                <a class="runner-text-link" href="mailto:igor.fcouto@gmail.com">Email Igor for support <span aria-hidden="true"></span></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
