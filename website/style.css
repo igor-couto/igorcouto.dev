@@ -153,7 +153,10 @@ header {
 }
 
 .icons {
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 4px;
     padding: 20px;
     margin: 10px 0 10px 0;
 }
