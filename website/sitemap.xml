@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.igorcouto.com/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://igorcouto.com/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.igorcouto.com/projects/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://igorcouto.com/projects/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.igorcouto.com/projects/github-self-hosted-runner-manager.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://igorcouto.com/projects/github-self-hosted-runner-manager</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.igorcouto.com/projects/my-pies.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <loc>https://igorcouto.com/projects/my-pies</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.igorcouto.com/projects/home-server.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <loc>https://igorcouto.com/projects/home-server</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.igorcouto.com/projects/detective-bacon.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <loc>https://igorcouto.com/projects/detective-bacon</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
