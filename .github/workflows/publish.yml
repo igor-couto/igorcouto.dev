@@ -56,6 +56,10 @@ jobs:
         SSH_USER: ${{ secrets.SSH_USER }}
         SSH_PORT: ${{ secrets.SSH_PORT }}
       run: |
-        scp -P $SSH_PORT -r ./website/dist/* $SSH_USER@$SSH_HOST:/var/www/html
-        ssh -p $SSH_PORT $SSH_USER@$SSH_HOST "chmod -R 755 /var/www/html"
+        scp -P "$SSH_PORT" -r ./website/dist/* "$SSH_USER@$SSH_HOST:/var/www/html"
+        # Only adjust regular files and directories owned by the deployment user.
+        ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" '
+          find /var/www/html -type d -user "$(id -un)" -exec chmod 755 {} + &&
+          find /var/www/html -type f -user "$(id -un)" -exec chmod 644 {} +
+        '
       shell: bash
