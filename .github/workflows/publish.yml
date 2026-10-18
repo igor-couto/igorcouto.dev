@@ -20,6 +20,9 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Check site URLs
+      run: node scripts/check-seo.mjs
+
     - name: Install dependencies
       run: npm install html-minifier-terser clean-css-cli -g
 
@@ -41,6 +44,9 @@ jobs:
         cp -r ./website/error ./website/dist/error
         cp -r ./website/projects ./website/dist/projects
         cp -r ./website/sitemap.xml ./website/dist/sitemap.xml
+
+    - name: Validate published files
+      run: node scripts/check-seo.mjs website/dist
 
     - name: Setup SSH
       run: |

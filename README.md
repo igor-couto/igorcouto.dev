@@ -21,25 +21,34 @@ Keep internal links, canonical tags, Open Graph URLs, and `website/sitemap.xml`
 aligned with these public URLs. Error pages are excluded from the sitemap and
 marked `noindex`.
 
-The website deployment copies static files only; it does not change DNS or Nginx.
-To redirect old project URLs, replace the existing `location /projects/` block
-in the site's Nginx configuration with
-[`deployment/nginx-project-pages.conf`](deployment/nginx-project-pages.conf).
-Remove the old individual Runner Manager and Home Server location blocks if
-they are still present. Leave all other application routes in place, then run:
+The deployment copies static files only; DNS, TLS and Nginx must be configured
+separately. Include [deployment/nginx-project-pages.conf](deployment/nginx-project-pages.conf)
+inside the existing server block with `root /var/www/html;`. Remove conflicting
+exact locations for the pages covered by the snippet, keeping application
+and API routes in place. Keep only one `absolute_redirect` directive in the
+server block. The snippet redirects legacy URLs to HTTPS and uses relative
+automatic directory redirects when TLS terminates at a proxy.
+
+For `www.igorcouto.com`, configure DNS and a certificate covering that hostname,
+then redirect to `https://igorcouto.com` while preserving the path and query
+string. Use a Cloudflare redirect or adapt
+[deployment/nginx-www-redirect.conf.example](deployment/nginx-www-redirect.conf.example)
+as separate Nginx server blocks. Its certificate paths are placeholders.
+
+Validate the server configuration before reloading:
 
 ```bash
 sudo nginx -t && sudo systemctl reload nginx
 ```
 
-For `www.igorcouto.com`, configure a proxied `www` CNAME pointing to
-`igorcouto.com` in Cloudflare DNS. Configure a permanent redirect that matches
-only the `www.igorcouto.com` hostname and sends requests to
-`https://igorcouto.com`, preserving their path and query string. Ensure the
-Cloudflare edge certificate covers `www.igorcouto.com` so HTTPS requests can
-reach the redirect. Existing redirects for other hosts should remain unchanged.
+After applying it, check that clean URLs return 200, legacy `.html` URLs return
+301 to their canonical URLs, and both HTTP and HTTPS on `www` redirect to the
+preferred host with paths and query strings intact.
 
-After applying the server changes, verify that a clean project URL returns
-`200`, its `.html` version redirects to that URL, and `www` redirects to the
-non-`www` host. Submit the updated `https://igorcouto.com/sitemap.xml` in Search
-Console after deployment.
+## Checks
+
+Run `node scripts/check-seo.mjs` with Node.js 20 or newer to check the sitemap,
+page metadata and internal links. Pass `website/dist` to check the built files.
+These checks run on pull requests and before deployment. They validate local
+files; public HTTP redirects and externally hosted applications require
+separate verification after deployment.
