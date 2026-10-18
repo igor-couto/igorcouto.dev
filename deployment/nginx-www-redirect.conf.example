@@ -1,0 +1,19 @@
+# Separate server blocks, NOT an include inside the main site's server block.
+# Use this OR a Cloudflare edge redirect, depending on where TLS terminates.
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.igorcouto.com;
+    return 301 https://igorcouto.com$request_uri;
+}
+
+# If Nginx terminates public HTTPS, adapt the certificate paths before enabling.
+# DNS and a valid certificate for www must exist before HTTPS can redirect.
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name www.igorcouto.com;
+    ssl_certificate /etc/letsencrypt/live/igorcouto.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/igorcouto.com/privkey.pem;
+    return 301 https://igorcouto.com$request_uri;
+}
